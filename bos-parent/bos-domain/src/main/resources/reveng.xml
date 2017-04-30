@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+<!--  下述标签 Oracle使用  -->
+<!-- 	<schema-selection match-table="T_USER" match-schema="SH1208"/> -->
+<!-- 	<table name="BC_DECIDEDZONE" schema="SH1208" -->
+<!-- 		class="cn.itcast.bos.domain.bc.DecidedZone"> -->
+<!-- 		<primary-key> -->
+<!-- 			<generator class="uuid"></generator> -->
+<!-- 		</primary-key> -->
+<!-- 	</table> -->
+<!-- 对于 数据库db_bos 下面 t_user 表 定义实体类生成规则 -->
+  <schema-selection  match-table="t_user"  match-catalog="db_bos"/>
+  <!-- . 代表任意字符 * 代表0或者多个字符 -->
+  <schema-selection  match-table="bc_.*"  match-catalog="db_bos"/>
+  <!-- 取派 -->
+  <schema-selection  match-table="qp_.*"  match-catalog="db_bos"/>
+  
+    <!-- 权限 -->
+  <schema-selection  match-table="auth_.*"  match-catalog="db_bos"/>
+  <!-- 中间表 -->
+  <schema-selection  match-table="role_function"  match-catalog="db_bos"/>
+  <schema-selection  match-table="user_role"  match-catalog="db_bos"/>
+  
+  <!-- 中间表需要生产实体类否  答案: 不需要  JPA 操作中间表 操作对象中集合 集合的Crud  中间表的crud  -->
+  
+  
+  
+  <!-- 权限实体类 -->
+     <table name="auth_role" catalog="db_bos"
+		class="cn.itcast.bos.domain.auth.Role">
+		<primary-key>
+		   <!-- uuid 主键 -->
+			<generator class="uuid"></generator>
+		</primary-key>
+	</table>
+	
+	   <table name="auth_function" catalog="db_bos"
+		class="cn.itcast.bos.domain.auth.Function">
+		<primary-key>
+		   <!-- uuid 主键 -->
+			<generator class="uuid"></generator>
+		</primary-key>
+	</table>
+  
+  
+  <!-- 取派 -->
+     <table name="qp_noticebill" catalog="db_bos"
+		class="cn.itcast.bos.domain.qp.NoticeBill">
+		<primary-key>
+		   <!-- uuid 主键 -->
+			<generator class="uuid"></generator>
+		</primary-key>
+	</table>
+	
+	   <table name="qp_workbill" catalog="db_bos"
+		class="cn.itcast.bos.domain.qp.WorkBill">
+		<primary-key>
+		   <!-- uuid 主键 -->
+			<generator class="uuid"></generator>
+		</primary-key>
+	</table>
+	
+	     <table name="qp_workordermanage" catalog="db_bos"
+		class="cn.itcast.bos.domain.qp.WorkOrderManage">
+		<primary-key>
+		   <!-- uuid 主键 -->
+			<generator class="uuid"></generator>
+		</primary-key>
+	</table>
+  
+  
+  
+  
+	<!-- 实体类生成规则定义 -->
+	<table name="t_user" catalog="db_bos"
+		class="cn.itcast.bos.domain.user.User">
+		<primary-key>
+		   <!-- uuid 主键 -->
+			<generator class="uuid"></generator>
+		</primary-key>
+	</table>
+	<table name="bc_staff" catalog="db_bos"
+		class="cn.itcast.bos.domain.bc.Staff">
+		<primary-key>
+		   <!-- uuid 主键 -->
+			<generator class="uuid"></generator>
+		</primary-key>
+	</table>
+	<table name="bc_region" catalog="db_bos"
+		class="cn.itcast.bos.domain.bc.Region">
+		<primary-key>
+		   <!-- uuid 主键 -->
+			<generator class="uuid"></generator>
+		</primary-key>
+	</table>
+	<table name="bc_subarea" catalog="db_bos"
+		class="cn.itcast.bos.domain.bc.Subarea">
+		<primary-key>
+		   <!-- uuid 主键 -->
+			<generator class="uuid"></generator>
+		</primary-key>
+	</table>
+	<table name="bc_decidedzone" catalog="db_bos"
+		class="cn.itcast.bos.domain.bc.DecidedZone">
+		<primary-key>
+		   <!-- uuid 主键 -->
+			<generator class="uuid"></generator>
+		</primary-key>
+	</table>
+
+</hibernate-reverse-engineering>

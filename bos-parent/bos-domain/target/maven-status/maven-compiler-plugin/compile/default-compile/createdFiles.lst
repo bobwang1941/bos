@@ -1,0 +1,11 @@
+cn\itcast\bos\domain\user\User.class
+cn\itcast\bos\domain\qp\WorkBill.class
+cn\itcast\bos\domain\qp\NoticeBill.class
+cn\itcast\bos\domain\bc\Region.class
+cn\itcast\bos\domain\bc\Subarea.class
+cn\itcast\bos\domain\bc\Staff.class
+cn\itcast\bos\domain\bc\DecidedZone.class
+cn\itcast\bos\domain\auth\Role.class
+cn\itcast\bos\domain\qp\WorkOrderManage.class
+cn\itcast\bos\domain\auth\Function.class
+cn\itcast\crm\domain\Customer.class

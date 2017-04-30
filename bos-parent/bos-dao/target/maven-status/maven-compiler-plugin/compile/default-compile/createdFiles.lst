@@ -1,0 +1,11 @@
+cn\itcast\bos\dao\bc\DecidedZoneDao.class
+cn\itcast\bos\dao\bc\SubAreaDao.class
+cn\itcast\bos\dao\bc\StaffDao.class
+cn\itcast\bos\dao\user\UserDao.class
+cn\itcast\bos\dao\qp\WorkOrderManageDao.class
+cn\itcast\bos\dao\qp\WorkBillDao.class
+cn\itcast\bos\dao\auth\FunctionDao.class
+cn\itcast\bos\dao\bc\RegionDao.class
+cn\itcast\bos\dao\auth\RoleDao.class
+cn\itcast\bos\dao\qp\WorkOrderManageDaoImpl.class
+cn\itcast\bos\dao\qp\NoticeBillDao.class
